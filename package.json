@@ -1,0 +1,25 @@
+{
+  "name": "maniaz",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suchetkumbar/Maniaz.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suchetkumbar/Maniaz/issues"
+  },
+  "homepage": "https://github.com/suchetkumbar/Maniaz#readme",
+  "type": "module",
+  "description": "",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
