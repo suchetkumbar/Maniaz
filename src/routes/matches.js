@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { createMatchSchema } from "../schemas/matchSchemas.js";
-import { db } from "../db.js";
-import { matches } from "../db/schema.js";
+import { createMatchSchema } from "../validation/matches.js";
+import { db } from "../db/db.js";
+//import { matches } from "../db/schema.js";
 import {string} from "zod";
 
 export const matchRouter = Router();
@@ -50,6 +50,10 @@ matchRouter.post('/', async (req,res)=>{
             awayScore: awayScore ?? 0,
             status: getMatchStatus(startTime, endTime),
         }).returning();
+
+        if(res.app.locals.broadcastMatchCreated){
+            res.app.locals.broadcastMatchCreated(event);
+        }
 
         res.status(201).json({data:event});
     }
