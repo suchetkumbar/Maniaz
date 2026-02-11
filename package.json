@@ -24,6 +24,8 @@
   "type": "module",
   "description": "",
   "dependencies": {
+    "@arcjet/inspect": "^1.1.0",
+    "@arcjet/node": "^1.1.0",
     "dotenv": "^17.2.4",
     "drizzle-kit": "^0.31.9",
     "drizzle-orm": "^0.45.1",
