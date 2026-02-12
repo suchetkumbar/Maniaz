@@ -2,7 +2,7 @@ import {pgTable, serial, text, integer, timestamp, pgEnum, jsonb} from 'drizzle-
 
 export const matchStatusEnum = pgEnum('match_status', ['scheduled', 'live', 'finished']);
 
-export const matched = pgTable('matches',{
+export const matches = pgTable('matches',{
     id: serial('id').primaryKey(),
     sport: text('sport').notNull(),
     homeTeam: text('home_team').notNull(),

@@ -1,7 +1,7 @@
 import { Router } from "express";
 import { createMatchSchema } from "../validation/matches.js";
 import { db } from "../db/db.js";
-//import { matches } from "../db/schema.js";
+import { matches } from "../db/schema.js";
 import {string} from "zod";
 
 export const matchRouter = Router();
